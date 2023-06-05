@@ -3,7 +3,37 @@
 {
 	"name": "Python 3",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/python:0-3.10"
+	"image": "mcr.microsoft.com/devcontainers/python:0-3.10",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {
+			"installDirectlyFromGitHubRelease": true,
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"nodeGypDependencies": true,
+			"version": "18"
+		},
+		"ghcr.io/devcontainers/features/nvidia-cuda:1": {
+			"installCudnn": true,
+			"installNvtx": true,
+			"cudaVersion": "11.8",
+			"cudnnVersion": "8.6.0.163"
+		},
+		"ghcr.io/rocker-org/devcontainer-features/r-apt:0": {
+			"installDevTools": true,
+			"installREnv": true,
+			"installRMarkdown": true,
+			"installJupyterlab": true,
+			"installRadian": true,
+			"installVscDebugger": true,
+			"useTesting": true,
+			"vscodeRSupport": "minimal"
+		},
+		"ghcr.io/devcontainers-contrib/features/firebase-cli:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/fish-apt-get:1": {}
+	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
