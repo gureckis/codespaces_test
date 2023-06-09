@@ -9,11 +9,11 @@
             "userUid": "1000",
             "userGid": "1000"
         },
-        "ghcr.io/devcontainers/features/dotnet:1": {
-            "version": "7",
-            "installUsingApt": "false",
-            "additionalVersions": "6"
-        },
+        // "ghcr.io/devcontainers/features/dotnet:1": {
+        //     "version": "7",
+        //     "installUsingApt": "false",
+        //     "additionalVersions": "6"
+        // },
         // "ghcr.io/devcontainers/features/hugo:1": {
         //     "version": "latest"
         // },
@@ -29,11 +29,11 @@
             "configureJupyterlabAllowOrigin": "*"
         },
         "./local-features/machine-learning-packages": "latest",
-        "ghcr.io/devcontainers/features/php:1": {
-            "version": "8.2.1",
-            "additionalVersions": "8.1.14",
-            "installComposer": "true"
-        },
+        // "ghcr.io/devcontainers/features/php:1": {
+        //     "version": "8.2.1",
+        //     "additionalVersions": "8.1.14",
+        //     "installComposer": "true"
+        // },
         // "ghcr.io/devcontainers/features/conda:1": {
         //     "version": "latest"
         // },
@@ -77,7 +77,7 @@
     "overrideFeatureInstallOrder": [
         "ghcr.io/devcontainers/features/common-utils",
         "ghcr.io/devcontainers/features/git",
-        "ghcr.io/devcontainers/features/dotnet",
+        // "ghcr.io/devcontainers/features/dotnet",
         // "ghcr.io/devcontainers/features/hugo",
         "ghcr.io/devcontainers/features/node",
         "./local-features/nvs",
