@@ -48,6 +48,31 @@
     },
     "ghcr.io/devcontainers/features/github-cli:1": {
       "version": "latest"
+    },
+    "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+      "packages": "make,gcc,g++"
+    },
+    "ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
+      "installDevTools": "true",
+      "installREnv": "true",
+      "installRMarkdown": "true",
+      "installJupyterlab": "true",
+      "installRadian": "true",
+      "installVscDebugger": "true"
+    },
+    "ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
+      "packages": [
+        "tidyverse",
+        "ggplot2",
+        "dplyr",
+        "tidyr",
+        "readr",
+        "rstan",
+        "lme4",
+        "cli",
+        "rlang",
+        "languageserver"
+      ]
     }
     //"./local-features/setup-user": "latest"
   },
@@ -65,7 +90,9 @@
     "ghcr.io/devcontainers/features/ruby",
     // "ghcr.io/devcontainers/features/java",
     // "ghcr.io/devcontainers/features/sshd",
-    "./local-features/jekyll"
+    "./local-features/jekyll",
+    "ghcr.io/rocker-org/devcontainer-features/r-rig:1",
+    "ghcr.io/rocker-org/devcontainer-features/r-packages:1"
     //"./local-features/setup-user"
   ],
   "remoteUser": "codespace",
@@ -121,7 +148,9 @@
         "daylerees.rainglow",
         "rebornix.ruby",
         "Vue.volar",
-        "DavidAnson.vscode-markdownlint"
+        "DavidAnson.vscode-markdownlint",
+        "REditorSupport.r",
+        "Ikuyadeu.r-pack"
       ]
     }
   }
