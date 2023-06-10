@@ -47,15 +47,6 @@ if [[ "$(python --version)" != "" ]] && [[ "$(pip --version)" != "" ]]; then
     install_python_package "torch"
     install_python_package "requests"
     install_python_package "plotly"
-    install_python_package "pingouin"
-    install_python_package "statsmodels"
-    install_python_package "py2r"
-    install_python_package "bambi"
-    install_python_package "pymc3"
-    install_python_package "arviz"
-    install_python_package "pystan"
-    install_python_package "tensorflow"
-    install_python_package "keras"
 else
     "(*) Error: Need to install python and pip."
 fi

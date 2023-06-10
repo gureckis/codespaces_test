@@ -4,7 +4,6 @@
 #-------------------------------------------------------------------------------------------------------------
 
 FROM ubuntu:focal
-
 COPY first-run-notice.txt /tmp/scripts/
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
@@ -17,44 +16,44 @@ ENV LANG="C.UTF-8"
 RUN apt-get update \
     && apt-get upgrade -y \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-    make \
-    unzip \
-    # The tools in this package are used when installing packages for Python
-    build-essential \
-    swig3.0 \
-    # Required for Microsoft SQL Server
-    unixodbc-dev \
-    # Required for PostgreSQL
-    libpq-dev \
-    # Required for mysqlclient
-    default-libmysqlclient-dev \
-    # Required for ts
-    moreutils \
-    rsync \
-    zip \
-    libgdiplus \
-    jq \
-    # By default pip is not available in the buildpacks image
-    python-pip-whl \
-    python3-pip \
-    #.NET Core related pre-requisites
-    libc6 \
-    libgcc1 \
-    libgssapi-krb5-2 \
-    libncurses5 \
-    liblttng-ust0 \
-    libssl-dev \
-    libstdc++6 \
-    zlib1g \
-    libuuid1 \
-    libunwind8 \
-    sqlite3 \
-    libsqlite3-dev \
-    software-properties-common \
-    tk-dev \
-    uuid-dev \
-    curl \
-    gettext \
+        make \
+        unzip \
+        # The tools in this package are used when installing packages for Python
+        build-essential \
+        swig3.0 \
+        # Required for Microsoft SQL Server
+        unixodbc-dev \
+        # Required for PostgreSQL
+        libpq-dev \
+        # Required for mysqlclient
+        default-libmysqlclient-dev \
+        # Required for ts
+        moreutils \
+        rsync \
+        zip \
+        libgdiplus \
+        jq \
+        # By default pip is not available in the buildpacks image
+        python-pip-whl \
+        python3-pip \
+        #.NET Core related pre-requisites
+        libc6 \
+        libgcc1 \
+        libgssapi-krb5-2 \
+        libncurses5 \
+        liblttng-ust0 \
+        libssl-dev \
+        libstdc++6 \
+        zlib1g \
+        libuuid1 \
+        libunwind8 \
+        sqlite3 \
+        libsqlite3-dev \
+        software-properties-common \
+        tk-dev \
+        uuid-dev \
+        curl \
+        gettext \
     && rm -rf /var/lib/apt/lists/* \
     # This is the folder containing 'links' to benv and build script generator
     && apt-get update \
@@ -69,7 +68,7 @@ RUN apt-get update \
     && apt-get install -yq vim vim-doc xtail software-properties-common libsecret-1-dev \
     # Install additional tools (useful for 'puppeteer' project)
     && apt-get install -y --no-install-recommends libnss3 libnspr4 libatk-bridge2.0-0 libatk1.0-0 libx11-6 libpangocairo-1.0-0 \
-    libx11-xcb1 libcups2 libxcomposite1 libxdamage1 libxfixes3 libpango-1.0-0 libgbm1 libgtk-3-0 \
+                                                  libx11-xcb1 libcups2 libxcomposite1 libxdamage1 libxfixes3 libpango-1.0-0 libgbm1 libgtk-3-0 \
     # Clean up
     && apt-get autoremove -y && apt-get clean -y \
     # Move first run notice to right spot
@@ -90,11 +89,11 @@ RUN apt-get install -yq fish \
 RUN apt-get clean -y && rm -rf /tmp/scripts
 
 # Mount for docker-in-docker 
-#VOLUME [ "/var/lib/docker" ]
+# VOLUME [ "/var/lib/docker" ]
 
-# Fire Docker/Moby script if needed
-ENTRYPOINT [ "/usr/local/share/docker-init.sh", "/usr/local/share/ssh-init.sh"]
-CMD [ "sleep", "infinity" ]
+# # Fire Docker/Moby script if needed
+# ENTRYPOINT [ "/usr/local/share/docker-init.sh", "/usr/local/share/ssh-init.sh"]
+# CMD [ "sleep", "infinity" ]
 
 # [Optional] Install debugger for development of Codespaces - Not in resulting image by default
 # ARG DeveloperBuild
