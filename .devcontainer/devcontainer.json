@@ -82,7 +82,6 @@
         "go.useLanguageServer": true,
         "editor.formatOnSave": true,
         "workbench.colorTheme": "Blink (rainglow)",
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "python.formatting.provider": "black",
         "python.defaultInterpreterPath": "/home/codespace/.python/current/bin/python3",
         "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
@@ -95,6 +94,8 @@
         "python.linting.pylintEnabled": false,
         "vs-code-prettier-eslint.prettierLast": true,
         "prettier.enable": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[python]": { "editor.defaultFormatter": null },
         "lldb.executable": "/usr/bin/lldb"
       },
       // Add the IDs of extensions you want installed when the container is created.
